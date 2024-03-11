@@ -1256,7 +1256,7 @@ if (reversed == null) { reversed = false; }
 	props.loop = loop;
 	props.reversed = reversed;
 	cjs.MovieClip.apply(this,[props]);
-	this.actionFrames = [0,1009,1010,1011,1041,1042,1059,2892,2893,3898];
+	this.actionFrames = [0,1010,1011,1041,1042,1059,2892,2893,3898];
 	this.streamSoundSymbolsList[0] = [{id:"stos_student",startFrame:0,endFrame:1011,loop:1,offset:0}];
 	this.streamSoundSymbolsList[1059] = [{id:"stos_singtosong",startFrame:1059,endFrame:2893,loop:1,offset:0}];
 	this.streamSoundSymbolsList[2893] = [{id:"stos_music",startFrame:2893,endFrame:3899,loop:1,offset:0}];
@@ -1310,17 +1310,16 @@ if (reversed == null) { reversed = false; }
 			_this.play_btn.visible = true;
 		});
 	}
-	this.frame_1009 = function() {
-		this.gotoAndStop('노래듣기');
-	}
 	this.frame_1010 = function() {
-		this.stop();
+		this.gotoAndStop('노래듣기');
+		this.play_btn.visible = true;
 	}
 	this.frame_1011 = function() {
 		this.stop();
 	}
 	this.frame_1041 = function() {
 		this.gotoAndStop('전문가창');
+		this.play_btn.visible = true;
 	}
 	this.frame_1042 = function() {
 		this.stop();
@@ -1331,6 +1330,7 @@ if (reversed == null) { reversed = false; }
 	}
 	this.frame_2892 = function() {
 		this.gotoAndStop('따라부르');
+		this.play_btn.visible = true;
 	}
 	this.frame_2893 = function() {
 		var soundInstance = playSound("stos_music",0);
@@ -1339,9 +1339,10 @@ if (reversed == null) { reversed = false; }
 	}
 	this.frame_3898 = function() {
 		this.gotoAndStop('반주듣기');
+		this.play_btn.visible = true;
 	}
 	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1009).call(this.frame_1009).wait(1).call(this.frame_1010).wait(1).call(this.frame_1011).wait(30).call(this.frame_1041).wait(1).call(this.frame_1042).wait(17).call(this.frame_1059).wait(1833).call(this.frame_2892).wait(1).call(this.frame_2893).wait(1005).call(this.frame_3898).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1010).call(this.frame_1010).wait(1).call(this.frame_1011).wait(30).call(this.frame_1041).wait(1).call(this.frame_1042).wait(17).call(this.frame_1059).wait(1833).call(this.frame_2892).wait(1).call(this.frame_2893).wait(1005).call(this.frame_3898).wait(1));
 	// chapter_no
 	this.instance = new lib.main_no("single",10);
 	this.instance.setTransform(55.55,75.25,1,1,0,0,0,30.4,30.4);
